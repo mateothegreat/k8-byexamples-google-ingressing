@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: glbc-ingress-lb
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /dashboard
+        backend:
+            serviceName: kubernetes-dashboard
+            servicePort: 80
+      - path: /echoserver
+        backend:
+            serviceName: echoserver
+            servicePort: 80

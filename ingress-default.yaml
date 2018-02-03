@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: glbc-ingress-lb
+spec:
+  backend:
+    serviceName: $SERVICE_NAME
+    servicePort: $SERVICE_PORT
+  rules:
+  - http:
+      paths:
+      - path: /dashboard
+        backend:
+            serviceName: $SERVICE_NAME
+            servicePort: $SERVICE_PORT
