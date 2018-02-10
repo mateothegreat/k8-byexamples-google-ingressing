@@ -6,7 +6,7 @@
 # /____                     matthewdavis.io, holla!
 
 
-NS              ?= kube-system
+NS              ?= openvpn
 SERVICE_NAME    ?= kubernetes-dashboard
 SERVICE_PORT    ?= 80
 export
